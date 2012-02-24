@@ -1,0 +1,17 @@
+﻿<Window x:Class="SQLproj.OrderDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrderDetailWindow" Height="350" Width="270">
+    <Grid>
+        <ListView ItemsSource="{Binding Path=OrderDetails}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Product" Width="195" DisplayMemberBinding="{Binding Path=Product}"></GridViewColumn>
+                        <GridViewColumn Header="Quantity" Width="50" DisplayMemberBinding="{Binding Path=Quantity}"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
